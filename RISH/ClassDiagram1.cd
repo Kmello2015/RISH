@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RISH.Models.ApplicationUser">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RISH.Models.Hardware">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAEAAAEQID/B4AAAAAAAAEAAACAAQggAAABAAg=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RISH.Models.HardwareType">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAACAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RISH.Models.HardwareStatus">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAACAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RISH.Models.Software">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAABAAAEAAAABoAAAAQAABAAAADAAAAAAAAYAQg=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RISH.Models.LicenseType">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RISH.Models.SoftwareArchitecture">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RISH.Models.Vendor">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RISH.Models.Provider">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAQAQAABCAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RISH.Models.InstalledSoftware">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEAAAAAAACAAAAAEAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

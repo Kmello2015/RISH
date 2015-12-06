@@ -180,6 +180,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HardwareController.cs" />
+    <Compile Include="Controllers\HardwareStatusController.cs" />
+    <Compile Include="Controllers\HardwareTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SoftwareController.cs" />
@@ -216,6 +218,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -282,6 +285,16 @@
     <Content Include="Views\Vendor\Details.cshtml" />
     <Content Include="Views\Vendor\Edit.cshtml" />
     <Content Include="Views\Vendor\Index.cshtml" />
+    <Content Include="Views\HardwareType\Create.cshtml" />
+    <Content Include="Views\HardwareType\Delete.cshtml" />
+    <Content Include="Views\HardwareType\Details.cshtml" />
+    <Content Include="Views\HardwareType\Edit.cshtml" />
+    <Content Include="Views\HardwareType\Index.cshtml" />
+    <Content Include="Views\HardwareStatus\Create.cshtml" />
+    <Content Include="Views\HardwareStatus\Delete.cshtml" />
+    <Content Include="Views\HardwareStatus\Details.cshtml" />
+    <Content Include="Views\HardwareStatus\Edit.cshtml" />
+    <Content Include="Views\HardwareStatus\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
