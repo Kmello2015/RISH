@@ -1,33 +1,42 @@
 ﻿@model IEnumerable<RISH.Models.HardwareType>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tipo de Hardware";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+<h2>@ViewBag.Title </h2>
+@using (Html.BeginForm("Index", "HardwareType", null, FormMethod.Get, new { @class = "form-inline" }))
+{
+    <div class="form-group">
+        <label for="SearchString">Nombre:</label>
+        @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
+    </div>
+    <button class="btn btn-primary">Buscar</button>
+    <a href="@Url.Action("Create")" class="btn btn-default">Crear Nuevo</a>
 }
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
 
+        }
+    </tbody>
 </table>

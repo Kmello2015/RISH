@@ -1,11 +1,11 @@
-﻿@model IEnumerable<RISH.Models.HardwareStatus>
+﻿@model IEnumerable<RISH.Models.Provider>
 
 @{
-    ViewBag.Title = "Hardware Status";
+    ViewBag.Title = "Proveedor";
 }
 
 <h2>@ViewBag.Title </h2>
-@using (Html.BeginForm("Index", "HardwareStatus", null, FormMethod.Get, new { @class = "form-inline" }))
+@using (Html.BeginForm("Index", "Provider", null, FormMethod.Get, new { @class = "form-inline" }))
 {
     <div class="form-group">
         <label for="SearchString">Nombre:</label>
@@ -18,7 +18,19 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.RUT)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BusinessName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
             </th>
             <th></th>
         </tr>
@@ -28,7 +40,19 @@
         {
             <tr>
                 <td>
+                    @Html.DisplayFor(modelItem => item.RUT)
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BusinessName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

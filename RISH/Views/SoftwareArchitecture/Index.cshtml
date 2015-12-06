@@ -1,11 +1,9 @@
-﻿@model IEnumerable<RISH.Models.HardwareStatus>
-
+﻿@model IEnumerable<RISH.Models.SoftwareArchitecture>
 @{
-    ViewBag.Title = "Hardware Status";
+    ViewBag.Title = "Arquitecturas";
 }
-
-<h2>@ViewBag.Title </h2>
-@using (Html.BeginForm("Index", "HardwareStatus", null, FormMethod.Get, new { @class = "form-inline" }))
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("Index", "SoftwareArchitecture", null, FormMethod.Get, new { @class = "form-inline" }))
 {
     <div class="form-group">
         <label for="SearchString">Nombre:</label>

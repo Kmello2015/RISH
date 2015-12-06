@@ -183,7 +183,10 @@
     <Compile Include="Controllers\HardwareStatusController.cs" />
     <Compile Include="Controllers\HardwareTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LicenseTypeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProviderController.cs" />
+    <Compile Include="Controllers\SoftwareArchitectureController.cs" />
     <Compile Include="Controllers\SoftwareController.cs" />
     <Compile Include="Controllers\VendorController.cs" />
     <Compile Include="Global.asax.cs">
@@ -247,8 +250,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -295,6 +296,21 @@
     <Content Include="Views\HardwareStatus\Details.cshtml" />
     <Content Include="Views\HardwareStatus\Edit.cshtml" />
     <Content Include="Views\HardwareStatus\Index.cshtml" />
+    <Content Include="Views\LicenseType\Create.cshtml" />
+    <Content Include="Views\LicenseType\Delete.cshtml" />
+    <Content Include="Views\LicenseType\Details.cshtml" />
+    <Content Include="Views\LicenseType\Edit.cshtml" />
+    <Content Include="Views\LicenseType\Index.cshtml" />
+    <Content Include="Views\Provider\Create.cshtml" />
+    <Content Include="Views\Provider\Delete.cshtml" />
+    <Content Include="Views\Provider\Details.cshtml" />
+    <Content Include="Views\Provider\Edit.cshtml" />
+    <Content Include="Views\Provider\Index.cshtml" />
+    <Content Include="Views\SoftwareArchitecture\Create.cshtml" />
+    <Content Include="Views\SoftwareArchitecture\Delete.cshtml" />
+    <Content Include="Views\SoftwareArchitecture\Details.cshtml" />
+    <Content Include="Views\SoftwareArchitecture\Edit.cshtml" />
+    <Content Include="Views\SoftwareArchitecture\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

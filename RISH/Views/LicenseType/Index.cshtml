@@ -1,11 +1,11 @@
-﻿@model IEnumerable<RISH.Models.HardwareStatus>
+﻿@model IEnumerable<RISH.Models.LicenseType>
 
 @{
-    ViewBag.Title = "Hardware Status";
+    ViewBag.Title = "Tipo de Licencia";
 }
 
 <h2>@ViewBag.Title </h2>
-@using (Html.BeginForm("Index", "HardwareStatus", null, FormMethod.Get, new { @class = "form-inline" }))
+@using (Html.BeginForm("Index", "LicenseType", null, FormMethod.Get, new { @class = "form-inline" }))
 {
     <div class="form-group">
         <label for="SearchString">Nombre:</label>
@@ -14,6 +14,7 @@
     <button class="btn btn-primary">Buscar</button>
     <a href="@Url.Action("Create")" class="btn btn-default">Crear Nuevo</a>
 }
+
 <table class="table table-hover">
     <thead>
         <tr>
