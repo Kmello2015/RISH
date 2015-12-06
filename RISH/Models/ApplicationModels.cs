@@ -123,7 +123,7 @@ namespace RISH.Models
 		public virtual HardwareStatus Status { get; set; }
 
 		public virtual ICollection<InstalledSoftware> InstalledSoftwares { get; set; }
-    }
+	}
 
 	public class HardwareType
 	{
@@ -288,10 +288,10 @@ namespace RISH.Models
 		[Display(Name = "ID")]
 		public string Id { get; set; }
 
-		[Index("HardwareSoftwareIndex", IsUnique = true)]
+		[Index("HardwareSoftwareIndex", IsUnique = true, Order = 1)]
 		public int HardwareId { get; set; }
 
-		[Index("HardwareSoftwareIndex", IsUnique = true)]
+		[Index("HardwareSoftwareIndex", IsUnique = true, Order = 2)]
 		public int SoftwareId { get; set; }
 
 		[ForeignKey("HardwareId")]
