@@ -37,6 +37,8 @@ namespace RISH.Migrations
 			{
 				new HardwareStatus { Name = "Activo" },
 				new HardwareStatus { Name = "Inactivo" },
+				new HardwareStatus { Name = "En bodega" },
+				new HardwareStatus { Name = "Para baja" },
 			};
 			statuses.ForEach(i => context.HardwareStatuses.AddOrUpdate(s => s.Name, i));
 			context.SaveChanges();
@@ -93,6 +95,22 @@ namespace RISH.Migrations
 				if (userManager.Create(user, "Pa$$w0rd") == IdentityResult.Success)
 				{
 					userManager.AddToRoles(user.Id, "Administrador", "Supervisor", "Solicitante");
+				}
+			}
+
+			user = userManager.FindByName("latapiatalfaro@gmail.com");
+			if (user == null)
+			{
+				user = new ApplicationUser
+				{
+					UserName = "latapiatalfaro@gmail.com",
+					Email = "latapiatalfaro@gmail.com",
+					FirstName = "Maritza",
+					LastName = "Latapiat"
+				};
+				if (userManager.Create(user, "Pa$$w0rd") == IdentityResult.Success)
+				{
+					userManager.AddToRoles(user.Id, "Supervisor", "Solicitante");
 				}
 			}
 		}

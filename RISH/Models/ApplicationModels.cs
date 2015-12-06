@@ -111,7 +111,7 @@ namespace RISH.Models
 
 		[Required(ErrorMessage = "{0} es obligatorio")]
 		[Display(Name = "Estado")]
-		public short HardwareStatusId { get; set; }
+		public int HardwareStatusId { get; set; }
 
 		[ForeignKey("ProviderId")]
 		public virtual Provider Provider { get; set; }
@@ -142,10 +142,11 @@ namespace RISH.Models
 	public class HardwareStatus
 	{
 		[Display(Name = "Estado ID")]
-		public short Id { get; set; }
+		public int Id { get; set; }
 
 		[Required(ErrorMessage = "{0} es obligatorio")]
 		[Index("HardwareStatusNameIndex", IsUnique = true)]
+		[StringLength(100, ErrorMessage = "El número de caracteres de {0} no debe ser mayor a {1}.")]
 		[Display(Name = "Nombre")]
 		public string Name { get; set; }
 
@@ -168,11 +169,11 @@ namespace RISH.Models
 
 		[Required(ErrorMessage = "{0} es obligatorio")]
 		[Display(Name = "Tipo de Licencia")]
-		public short LicenseTypeId { get; set; }
+		public int LicenseTypeId { get; set; }
 
 		[Required(ErrorMessage = "{0} es obligatorio")]
 		[Display(Name = "Arquitectura")]
-		public short SoftwareArchitectureId { get; set; }
+		public int SoftwareArchitectureId { get; set; }
 
 		[Required(ErrorMessage = "{0} es obligatorio")]
 		[Display(Name = "Proveedor")]
@@ -210,7 +211,7 @@ namespace RISH.Models
 	public class LicenseType
 	{
 		[Display(Name = "ID")]
-		public short Id { get; set; }
+		public int Id { get; set; }
 
 		[Required(ErrorMessage = "{0} es obligatorio")]
 		[Index("LicenseTypeNameIndex", IsUnique = true)]
@@ -224,7 +225,7 @@ namespace RISH.Models
 	public class SoftwareArchitecture
 	{
 		[Display(Name = "ID")]
-		public short Id { get; set; }
+		public int Id { get; set; }
 
 		[Required(ErrorMessage = "{0} es obligatorio")]
 		[Index("SoftwareArchitectureNameIndex", IsUnique = true)]

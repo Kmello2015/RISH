@@ -31,12 +31,12 @@ namespace RISH.Migrations
                         WarrantyExpirationDate = c.DateTime(nullable: false),
                         InvoiceNumber = c.Int(nullable: false),
                         InvoiceDate = c.DateTime(nullable: false),
-                        HardwareStatusId = c.Short(nullable: false),
+                        HardwareStatusId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Providers", t => t.ProviderId, cascadeDelete: true)
-                .ForeignKey("dbo.HardwareStatus", t => t.HardwareStatusId, cascadeDelete: true)
-                .ForeignKey("dbo.HardwareTypes", t => t.HardwareTypeId, cascadeDelete: true)
+                .ForeignKey("dbo.Providers", t => t.ProviderId, cascadeDelete: false)
+                .ForeignKey("dbo.HardwareStatus", t => t.HardwareStatusId, cascadeDelete: false)
+                .ForeignKey("dbo.HardwareTypes", t => t.HardwareTypeId, cascadeDelete: false)
                 .Index(t => t.SerialNumber, unique: true, name: "HardwareSerialNumberIndex")
                 .Index(t => t.HardwareTypeId)
                 .Index(t => t.ProviderId)
@@ -51,8 +51,8 @@ namespace RISH.Migrations
                         SoftwareId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Hardwares", t => t.HardwareId, cascadeDelete: true)
-                .ForeignKey("dbo.Softwares", t => t.SoftwareId, cascadeDelete: true)
+                .ForeignKey("dbo.Hardwares", t => t.HardwareId, cascadeDelete: false)
+                .ForeignKey("dbo.Softwares", t => t.SoftwareId, cascadeDelete: false)
                 .Index(t => new { t.HardwareId, t.SoftwareId }, unique: true, name: "HardwareSoftwareIndex");
             
             CreateTable(
@@ -62,18 +62,18 @@ namespace RISH.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 100),
                         VendorId = c.Int(nullable: false),
-                        LicenseTypeId = c.Short(nullable: false),
-                        SoftwareArchitectureId = c.Short(nullable: false),
+                        LicenseTypeId = c.Int(nullable: false),
+                        SoftwareArchitectureId = c.Int(nullable: false),
                         ProviderId = c.Int(nullable: false),
                         PurchaseDate = c.DateTime(nullable: false),
                         InvoiceNumber = c.Int(nullable: false),
                         InvoiceDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.LicenseTypes", t => t.LicenseTypeId, cascadeDelete: true)
-                .ForeignKey("dbo.Providers", t => t.ProviderId, cascadeDelete: true)
-                .ForeignKey("dbo.SoftwareArchitectures", t => t.SoftwareArchitectureId, cascadeDelete: true)
-                .ForeignKey("dbo.Vendors", t => t.VendorId, cascadeDelete: true)
+                .ForeignKey("dbo.LicenseTypes", t => t.LicenseTypeId, cascadeDelete: false)
+                .ForeignKey("dbo.Providers", t => t.ProviderId, cascadeDelete: false)
+                .ForeignKey("dbo.SoftwareArchitectures", t => t.SoftwareArchitectureId, cascadeDelete: false)
+                .ForeignKey("dbo.Vendors", t => t.VendorId, cascadeDelete: false)
                 .Index(t => t.VendorId)
                 .Index(t => t.LicenseTypeId)
                 .Index(t => t.SoftwareArchitectureId)
@@ -83,7 +83,7 @@ namespace RISH.Migrations
                 "dbo.LicenseTypes",
                 c => new
                     {
-                        Id = c.Short(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 100),
                     })
                 .PrimaryKey(t => t.Id)
@@ -108,7 +108,7 @@ namespace RISH.Migrations
                 "dbo.SoftwareArchitectures",
                 c => new
                     {
-                        Id = c.Short(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 100),
                     })
                 .PrimaryKey(t => t.Id)
@@ -128,8 +128,8 @@ namespace RISH.Migrations
                 "dbo.HardwareStatus",
                 c => new
                     {
-                        Id = c.Short(nullable: false, identity: true),
-                        Name = c.String(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 100),
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.Name, unique: true, name: "HardwareStatusNameIndex");

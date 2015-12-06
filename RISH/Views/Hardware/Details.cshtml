@@ -1,0 +1,178 @@
+﻿@model RISH.Models.Hardware
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hardware</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Provider.RUT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Provider.RUT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SerialNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property01)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property01)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property02)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property02)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property03)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property03)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property04)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property04)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property05)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property05)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property06)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property06)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property07)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property07)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property08)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property08)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property09)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property09)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property10)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property10)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarrantyExpirationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarrantyExpirationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

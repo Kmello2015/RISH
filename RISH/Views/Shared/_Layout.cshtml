@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -25,6 +26,11 @@
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+					@if (User.IsInRole("Administrador"))
+					{
+						<li>@Html.ActionLink("Equipos", "Index", "Hardware")</li>
+						<li>@Html.ActionLink("Software", "Index", "Software")</li>
+					}
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
