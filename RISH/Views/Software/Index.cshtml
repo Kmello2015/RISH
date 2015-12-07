@@ -18,19 +18,19 @@
     <thead>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.LicenseType.Name)
+            Tipo Licencia
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Provider.RUT)
+            Proveedor
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SoftwareArchitecture.Name)
+            Arquitectura
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Vendor.Name)
+            Vendor
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            Software
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PurchaseDate)
@@ -52,7 +52,7 @@
                     @Html.DisplayFor(modelItem => item.LicenseType.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Provider.RUT)
+                    @Html.DisplayFor(modelItem => item.Provider.Name)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.SoftwareArchitecture.Name)

@@ -35,7 +35,9 @@ namespace RISH.Models
 		public DbSet<LicenseType> LicenseTypes { get; set; }
 		public DbSet<SoftwareArchitecture> SoftwareArchitectures { get; set; }
 		public DbSet<Provider> Providers { get; set; }
-
 		public DbSet<InstalledSoftware> InstalledSoftwares { get; set; }
-	}
+        public DbSet<Location> Locations { get; set; }
+
+        //public System.Data.Entity.DbSet<RISH.Models.ApplicationUser> ApplicationUsers { get; set; }
+    }
 }

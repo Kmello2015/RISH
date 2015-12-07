@@ -188,6 +188,7 @@
     <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="Controllers\SoftwareArchitectureController.cs" />
     <Compile Include="Controllers\SoftwareController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\VendorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -195,6 +196,10 @@
     <Compile Include="Migrations\201512061834394_InitialCreate.cs" />
     <Compile Include="Migrations\201512061834394_InitialCreate.Designer.cs">
       <DependentUpon>201512061834394_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512070300423_AddLocation.cs" />
+    <Compile Include="Migrations\201512070300423_AddLocation.Designer.cs">
+      <DependentUpon>201512070300423_AddLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -223,6 +228,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.11.3.intellisense.js" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logo_emtech.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
@@ -311,6 +318,13 @@
     <Content Include="Views\SoftwareArchitecture\Details.cshtml" />
     <Content Include="Views\SoftwareArchitecture\Edit.cshtml" />
     <Content Include="Views\SoftwareArchitecture\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\User\AddRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,6 +336,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201512061834394_InitialCreate.resx">
       <DependentUpon>201512061834394_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512070300423_AddLocation.resx">
+      <DependentUpon>201512070300423_AddLocation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -65,9 +65,24 @@ namespace RISH.Models
     public class RegisterViewModel
     {
         [Required]
+        [StringLength(100, ErrorMessage = "El número de caracteres de {0} debe ser menor a {1}.", MinimumLength = 6)]
+        [Display(Name = "Nombre")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "El número de caracteres de {0} debe ser menor a {1}.", MinimumLength = 6)]
+        [Display(Name = "Apellido")]
+        public string LastName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Correo electrónico")]
         public string Email { get; set; }
+
+        [Required]
+        [Phone]
+        [Display(Name="Teléfono")]
+        public string PhoneNumber { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "El número de caracteres de {0} debe ser al menos {2}.", MinimumLength = 6)]
